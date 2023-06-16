@@ -136,14 +136,14 @@ body {
   .right-container > div {
    
     background-color: white;
-   
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 30px
   }
   
   .right-container p {
     padding-left: 50px;
     padding-right: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     line-height: 1.5;
     text-align: justify;
   }
@@ -153,8 +153,8 @@ body {
   }
   
   .right-container h3 {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    margin-top: 0;
+    
+    margin: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
