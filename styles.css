@@ -34,6 +34,7 @@ body {
   
   /* Estilos para la navegación */
   header nav {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     background: rgba(238, 91, 40, 255);
     display: flex;
     justify-content: center;
@@ -108,13 +109,15 @@ body {
     background-color: white;
   }
   
-  .left-container {
+  .left-container {  
     background-color: rgba(238, 91, 40, 255);
     width: 100%;
     text-align: center;
+    
   }
   
-  .left-container h1 {
+  .left-container h1 {    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     color: white;
     font-size: 40px;
     padding-top: 30px;
@@ -127,6 +130,7 @@ body {
     font-size: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: -35px;
   }
   
   .right-container > div {
@@ -149,7 +153,7 @@ body {
   }
   
   .right-container h3 {
-  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     margin-top: 0;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -231,6 +235,7 @@ body {
   }
 
   .servicios-top{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     background-color: rgba(238, 91, 40, 255);
     width: 100%;
     text-align: center;
