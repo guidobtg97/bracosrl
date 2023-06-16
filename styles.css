@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/bg-texture.png');
+    background-color: #21212d;
+  }
+  
+  body > * {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border-box;
+    
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+    
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+  
+  /* Estilos para el header */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+  }
+  
+  /* Estilos para el logo */
+  header img {
+    width: 100%;
+    max-width: 444px;
+  }
+  
+  /* Estilos para la navegación */
+  header nav {
+    background: rgba(238, 91, 40, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  header nav span{
+    color: white;
+  }
+
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav ul li { 
+    display: inline-block;
+    text-align: center;  
+    padding: 20px 20px;  
+  }
+
+  header nav ul li:hover,
+  header nav ul li:hover a {
+  background-color: white;
+  color: rgba(238, 91, 40, 255);
+  cursor: pointer;
+
+  }
+  header nav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Russo One', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+ 
+  /* Media Queries */
+  @media (max-width: 767px) {
+    header img {
+      max-width: 150px;
+    }
+  
+    header nav {
+      margin-top: 10px;
+      flex-direction: column;
+    }
+  
+    header nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    header nav a button {
+      display: block;
+      margin: 10px auto;
+    }
+  }
+  
+
+
+/* Estilos para el container nosotros */
+.nosotros-container {
+    font-family: 'Russo One', sans-serif;
+    margin-top: -37px;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .left-container {
+    background-color: rgba(238, 91, 40, 255);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .left-container h1 {
+    color: white;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .right-container {
+    width: 100%;
+    text-align: left;   
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-container > div {
+   
+    background-color: white;
+   
+    margin-bottom: 20px;
+  }
+  
+  .right-container p {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .right-container span {
+    color: rgba(238, 91, 40, 255);
+  }
+  
+  .right-container h3 {
+  
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    color: white;
+    background: linear-gradient(45deg, rgba(240, 143, 78, 0.8) 0%, rgba(238, 91, 40, 1) 20%, rgba(235, 99, 8, 0.8) 25%);
+    text-align: center;
+   
+  }
+
+  .icons {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    margin-top: -20px;
+  }
+  
+  .icons img {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .nosotros-container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .left-container {
+      width: 100%;
+    }
+    
+    .left-container h1 {
+      font-size: 30px;
+      padding-top: 30px;
+    }
+    
+    .right-container {
+      width: 100%;
+      font-size: 18px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .right-container > div {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+    
+    .right-container h3 {
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    /* Modificaciones para ajustar los divs uno debajo del otro */
+    .right-container > div {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .left-container h1 {
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    .right-container {
+        font-size: 16px;
+    }
+  }
+
+
+  .servicios-container{
+    font-family: 'Russo One', sans-serif;
+    align-items: center;
+    margin-top: -34px;
+    background-color: white;
+  }
+
+  .servicios-top{
+    background-color: rgba(238, 91, 40, 255);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servicios-top h1{
+    color: white;
+    font-size: 40px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .servicios-top p{
+    color: white;
+    font-size: 24px;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+
+  }
+  
+  .card {
+    flex-basis: calc(50% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    line-height: 1.5;
+  }
+
+  #wh{
+    background: linear-gradient(45deg, rgba(240, 143, 78, 0.8) 0%, rgba(238, 91, 40, 1) 0%, rgba(238, 146, 85, 0.8) 100%);
+    color: white;
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  .card h4 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .card p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .cards{
+      flex-direction: column; 
+    }
+    .card{
+      flex-basis: 100%;
+    }
+
+    .card:not(:last-child){
+      margin-right: 0;
+    }   
+  }
+
+
+
+
+
+  .taller-container{
+    width: 100%;
+    height: 500px;
+    background-color: blue;
+  }
+  .ubicacion-container{
+    width: 100%;
+    height: 500px;
+    background-color: orange;
+  }
+  .contacto-container{
+    width: 100%;
+    height: 500px;
+    background-color: lightblue;
+  }
+
+  footer{
+    width: 80%;
+    height: 500px;
+    background-color: cornsilk;
+  }
+
+  
+  .banner img {
+    width: 100%;
+ 
+  }
+  
