@@ -313,27 +313,326 @@ body {
 
 
 
-  .taller-container{
+  .taller-container {
     width: 100%;
-    height: 500px;
-    background-color: blue;
+    height: auto; /* Ajustamos la altura automáticamente */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider {
+    margin-top: 20px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.slider-container img {
+    width: 100%; /* Hacemos que las imágenes ocupen todo el ancho */
+    height: 700px; /* Ajustamos la altura automáticamente para mantener la proporción */
+    display: none;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(238, 91, 40, 255);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 10%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+#ubicacion {
+  background-color: white; /* Color de fondo del section */
+  padding-bottom: 17px;
+  margin-top: -20px;
+}
+
+.ubicacion-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Russo One', sans-serif;
+}
+
+.ubicacion-card {
+  flex-basis: 30%;
+  margin-left: 50px;
+  max-width: 300px;
+  height: auto;
+ 
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.ubicacion-card h3 {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  color: white;
+  background: linear-gradient(45deg, rgba(240, 143, 78, 0.8) 0%, rgba(238, 91, 40, 1) 20%, rgba(235, 99, 8, 0.8) 25%);
+  text-align: center;
+}
+
+.ubicacion-card p {
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.ubicacion-card span{
+  color: rgba(238, 91, 40, 255);
+}
+
+.ubicacion-map {
+  flex-basis: 40%;
+  text-align: center;
+}
+
+.ubicacion-map img {
+  max-width: 90%;
+  height: auto;
+}
+
+.ubicacion-image {
+  flex-basis: 30%;
+  margin: 0;
+  text-align: right;
+}
+
+.ubicacion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .contacto-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Russo One', sans-serif;
+    background-color: white;
+    margin-top: -20px;
   }
-  .ubicacion-container{
-    width: 100%;
-    height: 500px;
-    background-color: orange;
+  
+  .contacto {
+    flex-basis: 40%;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(45deg, rgba(240, 143, 78, 0.8) 0%, rgba(238, 91, 40, 1) 50%, rgba(235, 99, 8, 0.8) 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    line-height: 1.5;
+    margin: 30px;
+    margin-left: 30px;
   }
-  .contacto-container{
+  
+  .contacto-side {
+    flex-basis: 50%;
+  }
+  
+  .contacto p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .contacto ul {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contacto ul li {
+    
+    margin-bottom: 10px;
+  }
+  
+  .contacto ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .contacto ul li a i {
+    color: white;
+    margin-right: 10px;
+    font-size: 30px;
+  }
+  
+  .contacto-side img {
     width: 100%;
-    height: 500px;
-    background-color: lightblue;
+    height: 400px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .contacto-container {
+      flex-direction: column;
+    }
+  
+    .contacto,
+    .contacto-side {
+      flex-basis: 100%;
+      margin-left: 0; /* Elimina el margen izquierdo */
+      margin-right: 0; /* Elimina el margen derecho */
+      padding: 0; /* Agrega padding de 20px a todos los lados */
+    }
+  
+    .contacto {
+      margin: 20px; /* Agrega margen inferior para separarlo de contacto-side */
+      padding: 20px; /* Agrega padding de 20px a todos los lados */
+    }
+
+    .contacto p{
+        border-bottom: 1px solid white;
+    }
+  
+    .contacto ul li {
+      margin-bottom: 10px;
+    }
+
+     .contacto ul li a{
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+  
+    .contacto ul li a i {
+      margin-right: 10px;
+    }
+
+    .contacto-side img{
+      height: 300px;
+    }
   }
 
-  footer{
+  footer {
+    font-family: 'Russo One', sans-serif;
     width: 80%;
+    height: 600px;
+    background-color: rgba(238, 91, 40, 255);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+    margin-top: -18px;
+}
+
+.braco-footer{
+    display: inline-block;
+    height: 200px;
+    color: #222;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+.braco-footer h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 75px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.braco-footer h3{
+    line-height: 35px;
+    font-size: 28px;
+    letter-spacing: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+#verticle-line {
+    width: 2px;
     height: 500px;
-    background-color: cornsilk;
-  }
+    background-color: white;
+    margin-top: 50px;
+}
+
+.footer-list ul li a{
+   
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-list{
+    
+    
+    height: 400px;
+    margin-right: 200px;
+    margin-top: 100px;
+    color: white;
+    align-items: center;
+    display: flex;
+}
+
+.footer-list li{
+        
+        color: white;
+        padding-left: 30px;
+        padding-top: 15px;
+        text-decoration: none;
+        list-style: none;
+}
+
+.footer-list ul li a i {
+  color: white;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.footer-list ul li {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.footer-list ul li i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-list ul li a {
+  font-family: 'Cairo', sans-serif;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  list-style: none;
+}
 
   .banner{
     background-color: white;
@@ -352,4 +651,109 @@ body {
       margin-left: 0;
       margin-right: 0;
     }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .taller-container{
+      margin-bottom: 20px;
+    }
+    .slider-container img {
+      height: auto; /* Ajusta la altura automáticamente */
+      max-height: 400px; /* Establece una altura máxima de 300px */
+    }
+  
+    .prev-btn,
+    .next-btn {
+      font-size: 16px; /* Reduce el tamaño de fuente de los botones previos y siguientes */
+    }
+  }
+
+
+
+  @media only screen and (max-width: 768px) {
+    .ubicacion-container {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+    
+    .ubicacion-card {
+      margin-left: 0;
+      margin-bottom: 20px;
+      max-width: 90%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  
+    .ubicacion-card h3 {
+      padding: 10px 0;
+    }
+    
+    .ubicacion-card p {
+      padding: 10px;
+    }
+  
+    .ubicacion-map {
+      flex-basis: 100%;
+    }
+  
+    .ubicacion-map img {
+      max-width: 100%;
+    }
+  
+    .ubicacion-image {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .ubicacion-image img {
+      max-width: 100%;
+      height: auto;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    footer {
+      flex-direction: column;
+      height: auto;
+      margin-top: 0;
+    }
+  
+    .braco-footer {
+      margin: 20px;
+      text-align: center;
+    }
+  
+    #verticle-line {
+      display: none;
+    }
+  
+    
+  
+    #verticle-line {
+      display: none;
+    }
+  }
+
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    z-index: 999;
+    transition: bottom 0.3s;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #25d366;
   }
